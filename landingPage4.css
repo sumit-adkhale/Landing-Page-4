@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#container{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    /* height: 70px; */
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 4.5vw;
+}
+#left{
+    display: flex;
+}
+.dot{
+    /* width: 25px; */
+    width: 2vw;
+    /* height: 25px; */
+    height: 2vw;
+    background-color: black;
+    border-radius: 50%;
+    margin: 1px;
+}
+#right{
+    display: flex;
+    /* gap:50px; */
+    gap:4.3vw;
+}
+#right i{
+    display: none;
+    font-size: 20px;
+}
+#right span{
+    color:grey;
+    /* padding-left: 15px; */
+    padding-left: 1.5vw;
+}
+#nav2{
+    display: flex;
+    /* height: 60px; */
+    height: 5.2vw;
+    align-items: center;
+    /* gap: 80px; */
+    gap: 7vw;
+    /* padding: 0 50px; */
+    padding: 0 4.3vw;
+    background-color: aqua;
+}
+#nav2 h2{
+    /* font-size: 20px; */
+    font-size: 1.7vw;
+    text-transform: uppercase;
+}
+#content{
+    width: 100%;
+    height: calc(100% - 11.2vw);
+}
+#text-content{
+    width:100%;
+    height: 40%;
+    display: flex;
+    overflow-x: auto;
+}
+#text-content::-webkit-scrollbar{
+    background-color: transparent;
+    height: 5px;
+}
+#text-content::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+.elem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    font-size: 40px;
+    font-size: 3.5vw;
+    flex-shrink: 0;
+}
+#img-content{
+    width: 100%;
+    height: 60%;
+    overflow-x: auto;
+    display: flex;
+}
+#img-content::-webkit-scrollbar{
+    background-color: transparent;
+    /* height: 15px; */
+    height: 1.5vw;
+}
+#img-content::-webkit-scrollbar-thumb{
+    background-color: aqua;
+    border-radius: 10px;
+}
+#img-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 35%;
+    flex-shrink: 0;
+}
+@media(max-width:600px){
+    #right i{
+        display: initial;
+    }
+    #right h4{
+        display:none;
+    }
+    #right h4:nth-child(1){
+        display: initial;
+    }
+    #text-content{
+        height: 20%;
+    }
+    #img-content{
+        height: 80%;
+    }
+}
